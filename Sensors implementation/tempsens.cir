@@ -1,0 +1,49 @@
+*SPICE Simulation of National Semiconductor LM35 Precision Centigrade Temperature Sensor
+*
+*
+X1 1 LM35
+*
+.subckt LM35 Out
+* Simulation of National Semiconductor LM35 Precision Centigrade Temperature Sensor
+* By Colin Seymour http://www.cjseymour.plus.com/
+*
+* Spec for LM35 connected as Full-Range Centigrade Temperature Sensor:
+* Vout = +1500 mV at +150°C
+*      = +250 mV at +25°C
+*      = -550 mV at -55°C
+*
+* Current source I1 and resistor R0 create a voltage source
+* with a linear temperature coefficient tc1
+* controlled by the SPICE temperature
+* R = R0 * (1. + dt * tc1)
+* where R0 is the resistance at the nominal temperature
+* dt is the difference between the resistor's temperature
+* and the nominal temperature TNOM
+* LM35 tempco = 0.01 V per degree C
+I1 0 N001 1
+R0 N001 0 1 tc1=0.01
+*
+* Current source I2 and resistor R1 create a similar voltage source
+* with the same linear temperature coefficient, but the temperature
+* is fixed at zero C, which is the reference temperature
+* for the LM35
+I2 0 N002 1
+R1 N002 0 1 tc1=0.01 TEMP=0
+*
+* G1 and R2 subtract the reference voltage from the 
+* temperature dependent voltage to obtain a temperature
+* dependent output with zero at the reference temperature
+* for the LM35.
+* The output impedance is set to 0.1 ohms to match the
+* dynamic impedance of the LM35 for a 1mA load
+G1 0 Out N001 N002 10
+R2 Out 0 0.1
+.ends
+
+* Simulation commands to plot the operating point
+* over a temperature range
+.step temp -55 150 5
+.OP
+.print V(1)
+
+.end
