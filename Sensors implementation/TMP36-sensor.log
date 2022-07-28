@@ -1,0 +1,36 @@
+Circuit: * C:\Users\abhin\Desktop\AMRITA\AMFOSS\Kitchen-Hazard-Management-System\Sensors implementation\TMP36-sensor.asc
+
+Warning: Multiple definitions of model "2scr375p" Type: BJT
+Warning: Multiple definitions of model "bc857b" Type: BJT
+Warning: Multiple definitions of model "bc847c" Type: BJT
+Warning: Multiple definitions of model "bc847b" Type: BJT
+Direct Newton iteration for .op point succeeded.
+.step r=1
+.step r=11
+.step r=21
+.step r=31
+.step r=41
+.step r=51
+.step r=61
+.step r=71
+.step r=81
+.step r=91
+.step r=100
+
+Date: Thu Jul 28 14:37:52 2022
+Total elapsed time: 2.158 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 30047
+traniter = 30040
+tranpoints = 15021
+accept = 15021
+rejected = 0
+matrix size = 8
+fillins = 0
+solver = Normal
+Matrix Compiler1: 478 bytes object code size  0.1/0.1/[0.1]
+Matrix Compiler2: off  [0.0]/0.1/0.1
+
