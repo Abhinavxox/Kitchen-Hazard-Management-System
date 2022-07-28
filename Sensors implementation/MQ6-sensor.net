@@ -1,0 +1,9 @@
+* C:\Users\abhin\Desktop\AMRITA\AMFOSS\Kitchen-Hazard-Management-System\Sensors implementation\MQ6-sensor.asc
+R1 PPM 0 50k
+V1 PPM 0 PWL file=sensvalues.txt
+V2 V_in 0 10V
+R2 V_in V_sens R=249564*PWRS(V(PPM),-0.569)
+R3 V_sens 0 5k
+.tran 0 25s 0 1ms
+.backanno
+.end
