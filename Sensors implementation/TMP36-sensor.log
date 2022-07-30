@@ -17,8 +17,8 @@ Direct Newton iteration for .op point succeeded.
 .step r=91
 .step r=100
 
-Date: Thu Jul 28 14:37:52 2022
-Total elapsed time: 2.158 seconds.
+Date: Fri Jul 29 11:48:55 2022
+Total elapsed time: 2.079 seconds.
 
 tnom = 27
 temp = 27
@@ -31,6 +31,6 @@ rejected = 0
 matrix size = 8
 fillins = 0
 solver = Normal
-Matrix Compiler1: 478 bytes object code size  0.1/0.1/[0.1]
-Matrix Compiler2: off  [0.0]/0.1/0.1
+Matrix Compiler1:      27 opcodes  0.9/0.1/[0.1]
+Matrix Compiler2: 642 bytes object code size  0.1/0.1/[0.1]
 
